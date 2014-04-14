@@ -1,0 +1,36 @@
+/*
+* Ramundboende.se
+* Marike Grinde
+*/
+
+/* Navigation
+================================================== */
+nav{
+	text-align: center;
+	font-weight: bold;
+}
+nav ul{
+	float:right;
+	display: inline-block;
+}
+nav li{
+	margin-left:40px;
+	float: left;	
+}
+nav li a, a:visited {
+	height: 30px;
+	padding-top:10px;
+	text-decoration:none;
+	color: #000000;
+	display: block;
+	text-align: center;
+}
+
+nav li a:hover {
+	  background:#FFFFFF;
+ 	  filter: alpha(opacity=60);
+ 	  opacity: 0.6;
+}
+
+nav a.active{
+}
