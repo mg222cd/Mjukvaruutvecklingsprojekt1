@@ -3,20 +3,30 @@
 * Marike Grinde
 */
 
+/* Typography
+================================================== */
+body{
+	font-family:Helvetica;
+}
+
 /* Navigation
 ================================================== */
+
 nav{
-	text-align: center;
 	font-weight: bold;
 }
 nav ul{
-	float:right;
+	float:left;
 	display: inline-block;
 }
 nav li{
-	margin-left:40px;
 	float: left;	
 }
+
+.not_last{
+	margin-right: 20px;
+}
+
 nav li a, a:visited {
 	height: 30px;
 	padding-top:10px;
@@ -33,4 +43,23 @@ nav li a:hover {
 }
 
 nav a.active{
+}
+
+/* Content
+================================================== */
+
+#content{
+	margin-top: 50px;
+}
+
+/* Footer
+================================================== */
+footer{
+	border-top-style:solid;
+	border-top-color:#DDDDDD;
+	border-top-width: thin;
+}
+
+#footer_content{
+	margin-top:10px;
 }
