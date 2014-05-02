@@ -1,49 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Ramundberget</title>
-	<meta name="description" content="   	
-		Nybyggt hus i centrala Ramundberget. 50 meter till lift och slalombackar, 
-		50 m till längdspår, 50 meter till livsmedelsaffär och 100 meter till Ramundbergets centrum.">
-	<meta name="keywords" content="Ramundberget, Ramundberget boende">
-	<meta name="author" content="Ramundboende.se">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- CSS & JS TODO: lägg in egen CSS nedan. TODO: Utvärdera på iPhonne om maximum-scale ovan behöver stå kvar.
-  ================================================== -->
-	<link rel="stylesheet" href="stylesheets/base.css">
-	<link rel="stylesheet" href="stylesheets/skeleton.css">
-	<link rel="stylesheet" href="stylesheets/layout.css">
-	<link rel="stylesheet" href="style.css">
-	<!-- Favicon TODO:lägg in.
-	================================================== -->
-	<link rel="shortcut icon" href="">
-	<link rel="apple-touch-icon" href="">
-</head>
+<?php
+/*
+Template Name: Ramundberget
+*/
+?>
+<?php get_header() ?>
 
-<body>
-	<div class="container">
-		
-		<!-- HEADER -->
-		<div class="sixteen columns">
-			<div class="six columns alpha">
-			<img src="images/logo_ramund_small.png" alt="logga ramundboende" />
-			</div>
-			<nav>
-			<div class="ten columns omega">
-				<ul class="navigation_links">
-					<li><a href="index.html" class="active">hem</a></li>
-					<li><a href="#">nyheter</a></li>
-					<li><a href="#">boenden</a></li>
-					<li><a href="#">priser</a></li>
-					<li><a href="#">bokning</a></li>
-				</ul>
-			</div>
-			</nav>
-		</div><!-- sixteen columns -->
-		
-		
-		<!-- CONTENT -->
+<!-- CONTENT -->
 		<div class="sixteen columns">
 			<div id="content">
 			<div class="twelve columns alpha">
@@ -82,25 +44,4 @@
 			</div><!-- six columns -->
 			</div>
 		</div><!-- sixteen columns -->
-		
-		
-		<!-- FOOTER -->
-		<div class="sixteen columns">
-			<footer>
-				<div id="footer_content">
-					<div class="sixteen columns alpha">
-						<div id="footer_address">
-						<p>Mail: info(at)ramundboende.se<br />
-						Telefon: 070-3261974 eller 070-6221065<br />
-						Adress: Bruksvallarnas Semesterboende AB, Gruvarbetarvägen 14, 840 97 Bruksvallarna</p>
-						</div>
-					</div>
-				
-			</div>	
-			</footer>
-		</div>
-		
-		
-	</div><!-- container -->
-</body>
-</html>
+

@@ -10,10 +10,10 @@
 	<meta name="author" content="Ramundboende.se">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-	<link rel="stylesheet" href="<?php bloginfo('stylesheets/base.css'); ?>">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheets/skeleton.css'); ?>">
-	<link rel="stylesheet" href="<?php bloginfo('stylesheets/layout.css'); ?>">
-	<link rel="stylesheet" href="<?php bloginfo('style.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/base.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/skeleton.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/layout.css" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
 	
 	<!-- Favicon TODO:lägg in.
 	================================================== -->
@@ -26,21 +26,13 @@
 	<div class="container">
 		<!-- HEADER -->
 		<div class="sixteen columns">
-			<div class="ten columns alpha">
-			<img src="images/logo_ramund_small.png" alt="logga ramundboende" />
+			<div class="six columns alpha">
+				<img src="<?php bloginfo('url');?>/wp-content/themes/marike/images/logo_ramund_small.png" />
 			</div>
 			<nav>
-			<div class="six columns omega">
-				<ul>
-					<li><a href="<?php echo get_option('Ramundberget'); ?>"Hem</a></li>
+			<div class="ten columns omega">
+				<ul class="navigation_links">
 					<?php wp_list_pages('title_li=' ); ?>
-					<!--
-					<li class="not_last"><a href="index.html" class="active">hem</a></li>
-					<li class="not_last"><a href="#">nyheter</a></li>
-					<li class="not_last"><a href="#">boenden</a></li>
-					<li class="not_last"><a href="#">priser</a></li>
-					<li><a href="#">bokning</a></li>
-					-->
 				</ul>
 			</div>
 			</nav>

@@ -23,8 +23,8 @@ nav li{
 	float: left;	
 }
 
-.not_last{
-	margin-right: 20px;
+.navigation_links li{
+	margin-left: 10px;
 }
 
 nav li a, a:visited {
