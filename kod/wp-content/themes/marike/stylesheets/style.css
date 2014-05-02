@@ -16,7 +16,7 @@ nav{
 	font-weight: bold;
 }
 nav ul{
-	float:left;
+	float:right;
 	display: inline-block;
 }
 nav li{
@@ -62,4 +62,25 @@ footer{
 
 #footer_content{
 	margin-top:10px;
+}
+
+#footer_address{
+	float:right;
+	text-align: right;
+}
+
+#footer_address p{
+	margin-top:0px;
+}
+
+/* Contact Form
+================================================== */
+#contactform{
+	float: right;
+	text-align:right;
+}
+legend{
+	font-weight:bold;
+	font-size:16px;
+	padding-bottom:5px;
 }
