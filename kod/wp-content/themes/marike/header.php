@@ -37,3 +37,6 @@
 			</div>
 			</nav>
 		</div><!-- sixteen columns -->
+		
+		<!-- CONTENT -->
+		<div class="sixteen columns">

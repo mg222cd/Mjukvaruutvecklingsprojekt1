@@ -1,6 +1,8 @@
 /*
-* Ramundboende.se
-* Marike Grinde
+ * Theme Name: marike
+ * Theme URI: Ramundboende.se
+ * Version: 1.0
+ * Author: Marike Grinde
 */
 
 /* Typography
@@ -47,10 +49,33 @@ nav a.active{
 
 /* Content
 ================================================== */
-
 #content{
 	margin-top: 50px;
 }
+
+/* Sidebar
+================================================== */
+.widgettitle{
+	text-align: right;
+	font-size:20px;	
+}
+
+#sidebar ul{
+	text-align:right;
+}
+
+#sidebar ul li a{
+	text-decoration:none;
+	font-size:15px;
+	font-weight:bold;
+}
+
+.post-date{
+	display: block;
+	font-size:15px;
+	color:#888888;
+}
+
 
 /* Footer
 ================================================== */
