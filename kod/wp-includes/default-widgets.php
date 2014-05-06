@@ -578,6 +578,7 @@ class WP_Widget_Recent_Posts extends WP_Widget {
 			<?php if ( $show_date ) : ?>
 				<span class="post-date"><?php echo get_the_date(); ?></span>
 			<?php endif; ?>
+                      <?php echo the_excerpt(); ?>
 			</li>
 		<?php endwhile; ?>
 		</ul>
@@ -653,6 +654,7 @@ class WP_Widget_Recent_Comments extends WP_Widget {
 			return;
 		?>
 	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	
 <?php
 	}
 
