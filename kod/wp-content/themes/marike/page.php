@@ -7,7 +7,6 @@
 				<?php the_content()?>
 				<?php endwhile;?> 
 			</div><!-- twelve columns -->
-	<?php get_sidebar()?>
 	</div><!-- content -->
 			
 
