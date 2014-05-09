@@ -80,6 +80,7 @@ nav a.active{
 /* Footer
 ================================================== */
 footer{
+	margin-top:20px;
 	border-top-style:solid;
 	border-top-color:#DDDDDD;
 	border-top-width: thin;
@@ -100,6 +101,10 @@ footer{
 
 /* Tables
 ================================================== */
+table{
+	margin-bottom:20px;
+}
+
 .table_headers{
 	font-weight: bold;
 }
@@ -126,4 +131,34 @@ legend{
 	font-weight:bold;
 	font-size:16px;
 	padding-bottom:5px;
+}
+
+/* Modal
+================================================== 
+http://sldn.softlayer.com/blog/cwolff/Pure-CSS-Modal-Overlays*/
+
+#overlay {
+    display: block; /* ensures it’s invisible until it’s called */
+    position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
+    left: 25%; /* positions the div half way horizontally */
+    top: 25%; /* positions the div half way vertically */
+    padding: 25px; 
+    border: 2px solid black;
+    background-color: #ffffff;
+    width: 50%;
+    height: 50%;
+    z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
+}
+#fade {
+    display: block;  /* ensures it’s invisible until it’s called */
+    position: absolute;  /* makes the div go into a position that’s absolute to the browser viewing area */
+    left: 0%; /* makes the div span all the way across the viewing area */
+    top: 0%; /* makes the div span all the way across the viewing area */
+    background-color: black;
+    -moz-opacity: 0.7; /* makes the div transparent, so you have a cool overlay effect */
+    opacity: .70;
+    filter: alpha(opacity=70);
+    width: 100%;
+    height: 100%;
+    z-index: 90; /* makes the div the second most top layer, so it’ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
 }
