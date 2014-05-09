@@ -98,6 +98,24 @@ footer{
 	margin-top:0px;
 }
 
+/* Tables
+================================================== */
+.table_headers{
+	font-weight: bold;
+}
+
+.table_info{
+	padding-right:30px;
+}
+
+tr:nth-child(even){
+	background:#fdf0cf;
+}
+
+tr:nth-child(odd){
+	background:#FFFFFF;
+}
+
 /* Contact Form
 ================================================== */
 #contactform{
