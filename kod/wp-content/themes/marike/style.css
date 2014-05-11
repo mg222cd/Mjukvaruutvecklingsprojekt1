@@ -133,6 +133,59 @@ legend{
 	padding-bottom:5px;
 }
 
+/* Booking Form
+================================================== */
+
+.modal_container{
+	display: block; /* ensures it’s invisible until it’s called */
+    position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
+	margin:auto;
+    padding: 0px; 
+    width: 80%;
+    height: 50%;
+    z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
+}
+
+/* JS-Validation
+================================================== */
+
+.star{
+	position: absolute;
+	padding-left:5px;
+	font-weight:bold;
+	color:#000;
+}
+
+.tooltips {
+    position: absolute;
+	background-color:#FCF;
+    filter:alpha(opacity=80);
+	opacity: 0.8;
+	padding: 5px;
+}
+
+.popup{
+	background-color:#FFF;
+	position: absolute;
+	width:320px;
+	top:100px;
+	left:100px;
+	margin-left:auto;
+	margin-right:auto;
+	padding:10px;
+}
+
+.grayscale{
+	position:fixed;
+	top: 0;
+	width:100%;
+	height:100%;
+	background: #000;
+	-moz-opacity: 0.6;
+	opacity:0.6;
+	Filter:Alpha(opacity=60);
+}
+
 /* Modal
 ================================================== 
 http://sldn.softlayer.com/blog/cwolff/Pure-CSS-Modal-Overlays*/
@@ -141,12 +194,12 @@ http://sldn.softlayer.com/blog/cwolff/Pure-CSS-Modal-Overlays*/
     display: block; /* ensures it’s invisible until it’s called */
     position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
     left: 25%; /* positions the div half way horizontally */
-    top: 25%; /* positions the div half way vertically */
+    top: 5%; /* positions the div half way vertically */
     padding: 25px; 
     border: 2px solid black;
     background-color: #ffffff;
     width: 50%;
-    height: 50%;
+    height: 80%;
     z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
 }
 #fade {

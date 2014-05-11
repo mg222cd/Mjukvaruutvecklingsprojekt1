@@ -9,12 +9,13 @@
 	<meta name="keywords" content="Ramundberget, Ramundberget boende">
 	<meta name="author" content="Ramundboende.se">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- CSS & JS TODO: lägg in egen CSS nedan. TODO: Utvärdera på iPhonne om maximum-scale ovan behöver stå kvar.
+	<!-- CSS & JS 
   ================================================== -->
 	<link rel="stylesheet" href="stylesheets/base.css">
 	<link rel="stylesheet" href="stylesheets/skeleton.css">
 	<link rel="stylesheet" href="stylesheets/layout.css">
 	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="validator.js"></script>
 	<!-- Favicon TODO:lägg in.
 	================================================== -->
 	<link rel="shortcut icon" href="">
@@ -112,10 +113,58 @@
 							</tr>
 							</table>
 					</div>
-				<h4>Priser</h4>
-				
-					
+				<div id="overlay">
+					<h4>Bokning av _ vecka _ år _. Pris _</h4>
+					<p>Bekräfta bokningen genom att ange dina kontaktuppgifter nedan.</p>
+					<div class="modal_container">
+						<div class="modal_first_column">
+						<form id="bookingForm" action="">
+    					<div class="form_div">
+    						<p id="nameInput">
+					  		<label for="regularInput">Namn</label>
+					  		<input type="text" id="regularInputName" />
+					  		</p>
+					  	</div>
+					  	<div class="form_div">
+					  		<p id="addressInput">
+					  		<label for="regularInput">Adress</label>
+					  		<input type="text" id="regularInputAddress" />
+					  		</p>
+					  	</div>
+					  	<div class="form_div">
+					  		<p id="postalInput">
+					  		<label for="regularInput">Postnummer</label>
+					  		<input type="text" id="regularInputPostal" />
+					  		</p>
+					  	</div>
+						</div>
+						<div class="modal_second_column">
+							<p id="cityInput">
+							<div class="form_div">
+					  		<label for="regularInput">Ort</label>
+					  		<input type="text" id="regularInputCity" />
+					  		</p>
+					  	</div>
+					  	<div class="form_div">
+					  		<p id="phoneInput">
+					  		<label for="regularInput">Telefonnummer</label>
+					  		<input type="text" id="regularInputPhone" />
+					  		</p>
+					  	</div>
+					  	<div class="form_div">
+					  		<p id="mailInput">
+					  		<label for="regularInput">E-mail</label>
+					  		<input type="text" id="regularInputEmail" />
+					  		</p>
+					  	</div>
+					  <button type="submit" id="confirmBookingbutton" name="confirmBookingButton">Bekräfta</button>
+					  <button type="submit" id="breakBookingbutton" name="breakBookingButton">Avbryt</button>
+					</form>
+						</div>
+    				
+					</div>	
 				</div>
+				<div id="fade"></div>
 			</div><!-- twelve columns -->
 			<div class="four columns omega" id="sidebar">
 				<ul>

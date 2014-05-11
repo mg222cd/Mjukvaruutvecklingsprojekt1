@@ -49,7 +49,7 @@ class MasterController {
 			$table.= '<td class="table_info">'.$bokningsrad->Year.'</td>';
 			$table.= '<td class="table_info">'.$bokningsrad->Week.'</td>';
 			$table.= '<td class="table_info">'.$bokningsrad->Price.'</td>';
-			$table.= '<td><input type="hidden" value="'.$bokningsrad->BookingId.'"><input id="button" name="bookingButton" type="submit" value="Boka"></td>';
+			$table.= '<td><input type="hidden" value="'.$bokningsrad->BookingId.'"><input id="bookingButton" name="bookingButton" type="submit" value="Boka"></td>';
 			$table.= '</tr>';
 		}
 		$table.= '</table>';
