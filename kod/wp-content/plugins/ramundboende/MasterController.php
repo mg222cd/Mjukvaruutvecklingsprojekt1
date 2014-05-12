@@ -29,7 +29,7 @@ class MasterController {
 		for ($i=0; $i < count($stugor); $i++) { 
 			$output.= $this->renderTable($stugor[$i], $bokningar[$i]);
 		}
-		$output.=$this->newCustomerForm();
+		//$output.=$this->newCustomerForm();
 		return $output;
 	}
 	
@@ -57,6 +57,7 @@ class MasterController {
 		return $table;
 	}
 	
+	/*
 	public function newCustomerForm(){
 		return'<div id="overlay">
     	This is where you will put your inline HTML for the content inside of the overlay
@@ -64,5 +65,6 @@ class MasterController {
 		<div id="fade"></div>
 		';
 	}
+	*/
 }
 
