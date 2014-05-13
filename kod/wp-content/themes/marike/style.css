@@ -39,9 +39,7 @@ nav li a, a:visited {
 }
 
 nav li a:hover {
-	  background:#FFFFFF;
- 	  filter: alpha(opacity=60);
- 	  opacity: 0.6;
+	  color:#fc7a06;
 }
 
 nav a.active{
@@ -56,12 +54,12 @@ nav a.active{
 /* Sidebar
 ================================================== */
 .widgettitle{
-	text-align: right;
+	text-align: left;
 	font-size:20px;	
 }
 
 #sidebar ul{
-	text-align:right;
+	text-align:left;
 }
 
 #sidebar ul li a{
@@ -114,7 +112,7 @@ table{
 }
 
 tr:nth-child(even){
-	background:#fdf0cf;
+	background:#fee7d3;
 }
 
 tr:nth-child(odd){
@@ -199,7 +197,7 @@ http://sldn.softlayer.com/blog/cwolff/Pure-CSS-Modal-Overlays*/
     border: 2px solid black;
     background-color: #ffffff;
     width: 50%;
-    height: 80%;
+    height: 85%;
     z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
 }
 #fade {
