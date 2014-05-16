@@ -11,6 +11,15 @@ body{
 	font-family:Helvetica;
 }
 
+h2{
+	color: #E54F08;
+}
+
+h3{
+	font-size: 18px;
+	font-weight:bold;
+}
+
 /* Navigation
 ================================================== */
 
@@ -108,15 +117,21 @@ table{
 }
 
 .table_info{
+	margin: none;
 	padding-right:30px;
+	padding-left:4px;
 }
 
 tr:nth-child(even){
-	background:#fee7d3;
+	background:#EEEEEE;
 }
 
 tr:nth-child(odd){
 	background:#FFFFFF;
+}
+
+input[type="button"]{
+	color:#000000;
 }
 
 /* Contact Form
@@ -129,19 +144,6 @@ legend{
 	font-weight:bold;
 	font-size:16px;
 	padding-bottom:5px;
-}
-
-/* Booking Form
-================================================== */
-
-.modal_container{
-	display: block; /* ensures it’s invisible until it’s called */
-    position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
-	margin:auto;
-    padding: 0px; 
-    width: 80%;
-    height: 50%;
-    z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
 }
 
 /* JS-Validation
@@ -160,64 +162,4 @@ legend{
     filter:alpha(opacity=80);
 	opacity: 0.8;
 	padding: 5px;
-}
-
-.popup{
-	background-color:#FFF;
-	position: absolute;
-	width:320px;
-	top:100px;
-	left:100px;
-	margin-left:auto;
-	margin-right:auto;
-	padding:10px;
-}
-
-.grayscale{
-	position:fixed;
-	top: 0;
-	width:100%;
-	height:100%;
-	background: #000;
-	-moz-opacity: 0.6;
-	opacity:0.6;
-	Filter:Alpha(opacity=60);
-}
-
-/* Modal
-================================================== 
-http://sldn.softlayer.com/blog/cwolff/Pure-CSS-Modal-Overlays*/
-
-#overlay {
-    display: block; /* ensures it’s invisible until it’s called */
-    position: absolute; /* makes the div go into a position that’s absolute to the browser viewing area */
-    left: 25%; /* positions the div half way horizontally */
-    top: 5%; /* positions the div half way vertically */
-    padding: 25px; 
-    border: 2px solid black;
-    background-color: #ffffff;
-    width: 50%;
-    height: 85%;
-    z-index: 100; /* makes the div the top layer, so it’ll lay on top of the other content */
-}
-#fade {
-    display: block;  /* ensures it’s invisible until it’s called */
-    position: absolute;  /* makes the div go into a position that’s absolute to the browser viewing area */
-    left: 0%; /* makes the div span all the way across the viewing area */
-    top: 0%; /* makes the div span all the way across the viewing area */
-    background-color: black;
-    -moz-opacity: 0.7; /* makes the div transparent, so you have a cool overlay effect */
-    opacity: .70;
-    filter: alpha(opacity=70);
-    width: 100%;
-    height: 100%;
-    z-index: 90; /* makes the div the second most top layer, so it’ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */
-}
-
-.hideForm{
-	display: none !important;
-}
-
-.hideForm + #fade{
-	display: none;
 }

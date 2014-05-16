@@ -30,7 +30,7 @@
 		border: 0;
 		font-size: 100%;
 		font: inherit;
-		vertical-align: baseline; }
+		/*vertical-align: baseline;*/ }
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block; }
 	body {
@@ -152,7 +152,7 @@
 	  text-decoration: none;
 	  text-shadow: 0 1px rgba(255, 255, 255, .75);
 	  cursor: pointer;
-	  margin-bottom: 20px;
+	  margin-bottom: 1px;
 	  line-height: normal;
 	  padding: 8px 10px;
 	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }

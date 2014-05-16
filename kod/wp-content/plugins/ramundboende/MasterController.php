@@ -22,9 +22,9 @@ function addScript(){
 	wp_enqueue_script( 'jquery', plugins_url('jquery.js',__FILE__ ), false, '1.11.1');
 	wp_enqueue_script( 'validator', plugins_url('validator.js',__FILE__ ), array('jquery'), '1');
 	wp_enqueue_script( 'script', plugins_url('script.js',__FILE__ ), array('jquery','validator'), '1');
+	wp_enqueue_style( 'style', plugins_url('style.css', __FILE__) );
 }
 add_action( 'wp_enqueue_scripts', 'addScript' );
-
 
 require_once ("Booking.php");
 class MasterController {
@@ -70,7 +70,7 @@ class MasterController {
 			$table.= '<td class="table_info">'.$bokningsrad->Year.'</td>';
 			$table.= '<td class="table_info">'.$bokningsrad->Week.'</td>';
 			$table.= '<td class="table_info">'.$bokningsrad->Price.'</td>';
-			$table.= '<td><input type="hidden" value="'.$bokningsrad->BookingId.'"><input class="bookingButton" name="bookingButton" type="submit" value="Boka"></td>';
+			$table.= '<td ><input type="hidden" value="'.$bokningsrad->BookingId.'"><input class="bookingButton" name="bookingButton" type="submit" value="Boka"></td>';
 			$table.= '</tr>';
 		}
 		$table.= '</table>';
@@ -79,14 +79,18 @@ class MasterController {
 	}
 	
 	public function newCustomerForm($submitForm = null){
-		return'<div id="overlay" class="hideForm">
-					<h4>Bokning av <span class="span_propertyname"></span> vecka <span class="span_week"></span> år <span class="span_year"></span>. 
-					Pris <span class="span_price"></span></h4>
-					<p>Bekräfta bokningen genom att ange dina kontaktuppgifter nedan.</p>
-					<div class="modal_container">
-						<div class="modal_first_column">
-						<form id="bookingForm" method="POST" action="'.$this->curPageURL().'">
-						<input type="hidden" value="" id="hiddenId">
+		$class = "";
+		if (is_null($submitForm)) {
+			$class="hideForm";
+		}
+		global $wpdb;
+		$stuga = $wpdb->get_results( "SELECT * FROM wp_ramundboende_property WHERE PropertyId =".$submitForm[2][0]->PropertyId );
+		$h4 = '<h4>Bokning av <span class="span_propertyname">'.$stuga[0]->PropertyName.'</span> vecka <span class="span_week">'.$submitForm[2][0]->Week.'</span> 
+				år <span class="span_year">'.$submitForm[2][0]->Year.'</span>. 
+				Pris <span class="span_price">'.$submitForm[2][0]->Price.'</span></h4>';
+		$form = '<p>Bekräfta bokningen genom att ange dina kontaktuppgifter nedan.</p>
+				<form id="bookingForm" method="POST" action="'.$this->curPageURL().'">
+						<input type="hidden" name="hiddenId" value="" id="hiddenId">
     					<div class="form_div">
     						<p id="nameInput">
 					  		<label for="regularInput">Namn</label>
@@ -125,7 +129,23 @@ class MasterController {
 					  	</div>
 					  <button type="submit" id="confirmBookingbutton" name="confirmBookingButton">Bekräfta</button>
 					  <button type="submit" id="breakBookingbutton" name="breakBookingButton">Avbryt</button>
-					</form>
+					</form>';
+		if ($submitForm[1]) {
+			//lyckad bokning
+			$h1 = "<h1>Tack för din bokning!</h1>".$h4;
+			$button = '<button type="submit" id="breakBookingbutton" name="breakBookingButton">Återgå</button>';
+			$p = "<p>Här är lite text...</p>";
+			$message=array($h1,$p.$button);
+		}
+		else {
+			$h1 = $h4.'<div class="red_text">'.$submitForm[0].'</div>';
+			$message = array($h1,$form);
+		}
+		return'<div id="overlay" class="'.$class.'">
+					'.$message[0].'
+					<div class="modal_container">
+						<div class="modal_first_column">
+						'.$message[1].'
 					</div>
 					</div>	
 				</div>
@@ -134,19 +154,76 @@ class MasterController {
 	}
 
 	public function submitForm(){
-		$name = $_POST['regularInputName'];
-		$address = $_POST['regularInputAddress'];
-		$postal = $_POST['regularInputPostal'];
-		$city = $_POST['regularInputCity'];
-		$phone = $_POST['regularInputPhone'];
-		$email = $_POST['regularInputEmail'];
+		$name = $this->filterInput($_POST['regularInputName']);
+		$address = $this->filterInput($_POST['regularInputAddress']);
+		$postal = $this->filterInput($_POST['regularInputPostal']);
+		$city = $this->filterInput($_POST['regularInputCity']);
+		$phone = $this->filterInput($_POST['regularInputPhone']);
+		$email = $this->filterInput($_POST['regularInputEmail']);
+		$hidden = $_POST['hiddenId'];
 		
-		$regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/'; 
-	
-		if ( isset( $email ) && $email !== '' && preg_match($regex, $email) ) {
-			
+		$boolean = false;
+		$message = "";
+		global $wpdb;
+		$booking = $wpdb->get_results( "SELECT * FROM wp_ramundboende_booking WHERE BookingId=".$hidden);
+		if ($this->checkEmail($email)) {
+			$wpdb->insert( 'wp_ramundboende_customer', array('Name' => $name, 'Address' => $address, 'Postal' => $postal, 
+															'City' => $city, 'Phone' => $phone, 'Email' => $email ) );
+			$wpdb->update( 'wp_ramundboende_booking', array('CustomerId' => $wpdb->insert_id), array('BookingId' => $hidden) );	
+			$stuga = $wpdb->get_results( "SELECT * FROM wp_ramundboende_property WHERE PropertyId=".$booking[0]->PropertyId);
+			$sendinfo = array(
+				'customerInfo'=>array(
+					'Name' => $name, 
+					'Address' => $address, 
+					'Postal' => $postal, 
+					'City' => $city, 
+					'Phone' => $phone, 
+					'Email' => $email 
+				), 
+				'stuga'=>$stuga[0]->PropertyName, 
+				'week'=>$booking[0]->Week, 
+				'year'=>$booking[0]->Year, 
+				'price'=>$booking[0]->Price
+			);
+			$boolean = $this->sendToCustomer($sendinfo) && $this->sendToAdmin($sendinfo);
+			$message = "";
+		}	
+		else {
+			$message = "Ogiltigt format på E-postadressen.";
 		}
-			
+		return array($message, $boolean, $booking);
+	}
+	
+	private function checkEmail($email){
+		$regex = '/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/';
+		return isset( $email ) && $email !== '' && preg_match($regex, $email);
+	}
+	
+	private function filterInput($input){
+		global $wpdb;
+		$input = $wpdb->escape($input);
+		$input = strip_tags($input);
+		return $input;
+	}
+	
+	private function sendMail($email, $subject, $message){
+		return mail($email, $subject, $message);
+	}
+	
+	private function sendToCustomer($data=array('customerInfo'=>array(), 'stuga'=>'', 'week'=>'', 'year'=>'', 'price'=>'')){
+		$subject = "Bokningsbekräftelse";
+		$message = '<h4>Bokning av '.$data['stuga']->PropertyName.' vecka: '.$data['week']->Week.' år: '.$data['year']->Year.'. Pris: '.$data['price']->Price.'</h4>';
+		$message .= "fritext";
+		$email = $data['customerInfo']['Email'];
+		return $this->sendMail($email, $subject, $message);
+	}
+	
+	private function sendToAdmin($data=array('customerInfo'=>array(), 'stuga'=>'', 'week'=>'', 'year'=>'', 'price'=>'')){
+		$subject = "Ny bokning!";
+		$message = '<h4>Bokning av '.$data['stuga']->PropertyName.' vecka: '.$data['week']->Week.' år: '.$data['year']->Year.'. Pris: '.$data['price']->Price.'</h4>';
+		$message .= "";
+		$email = get_option('admin_email');
+		return $this->sendMail($email, $subject, $message);
 	}
 }
 
