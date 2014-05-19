@@ -69,7 +69,7 @@ class MasterController {
 			$table.= '<tr>';
 			$table.= '<td class="table_info">'.$bokningsrad->Year.'</td>';
 			$table.= '<td class="table_info">'.$bokningsrad->Week.'</td>';
-			$table.= '<td class="table_info">'.$bokningsrad->Price.'</td>';
+			$table.= '<td class="table_info">'.$bokningsrad->Price.':-</td>';
 			$table.= '<td ><input type="hidden" value="'.$bokningsrad->BookingId.'"><input class="bookingButton" name="bookingButton" type="submit" value="Boka"></td>';
 			$table.= '</tr>';
 		}
@@ -79,6 +79,14 @@ class MasterController {
 	}
 	
 	public function newCustomerForm($submitForm = null){
+		$name = $this->filterInput($_POST['regularInputName']);
+		$address = $this->filterInput($_POST['regularInputAddress']);
+		$postal = $this->filterInput($_POST['regularInputPostal']);
+		$city = $this->filterInput($_POST['regularInputCity']);
+		$phone = $this->filterInput($_POST['regularInputPhone']);
+		$email = $this->filterInput($_POST['regularInputEmail']);
+		$hidden = $_POST['hiddenId'];
+		
 		$class = "";
 		if (is_null($submitForm)) {
 			$class="hideForm";
@@ -87,44 +95,44 @@ class MasterController {
 		$stuga = $wpdb->get_results( "SELECT * FROM wp_ramundboende_property WHERE PropertyId =".$submitForm[2][0]->PropertyId );
 		$h4 = '<h4>Bokning av <span class="span_propertyname">'.$stuga[0]->PropertyName.'</span> vecka <span class="span_week">'.$submitForm[2][0]->Week.'</span> 
 				år <span class="span_year">'.$submitForm[2][0]->Year.'</span>. 
-				Pris <span class="span_price">'.$submitForm[2][0]->Price.'</span></h4>';
+				Pris <span class="span_price">'.$submitForm[2][0]->Price.':-</span></h4>';
 		$form = '<p>Bekräfta bokningen genom att ange dina kontaktuppgifter nedan.</p>
 				<form id="bookingForm" method="POST" action="'.$this->curPageURL().'">
-						<input type="hidden" name="hiddenId" value="" id="hiddenId">
+						<input type="hidden" name="hiddenId" value="'.$hidden.'" id="hiddenId">
     					<div class="form_div">
     						<p id="nameInput">
 					  		<label for="regularInput">Namn</label>
-					  		<input type="text" id="regularInputName" name="regularInputName" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputName" name="regularInputName" value="'.$name.'" data-validator="required|min:2|max:255" />
 					  		</p>
 					  	</div>
 					  	<div class="form_div">
 					  		<p id="addressInput">
 					  		<label for="regularInput">Adress</label>
-					  		<input type="text" id="regularInputAddress" name="regularInputAddress" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputAddress" name="regularInputAddress" value="'.$address.'" data-validator="required|min:2|max:255" />
 					  		</p>
 					  	</div>
 					  	<div class="form_div">
 					  		<p id="postalInput">
 					  		<label for="regularInput">Postnummer</label>
-					  		<input type="text" id="regularInputPostal" name="regularInputPostal" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputPostal" name="regularInputPostal" value="'.$postal.'" data-validator="required|min:2|max:255" />
 					  		</p>
 					  	</div>
 							<p id="cityInput">
 							<div class="form_div">
 					  		<label for="regularInput">Ort</label>
-					  		<input type="text" id="regularInputCity" name="regularInputCity" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputCity" name="regularInputCity" value="'.$city.'" data-validator="required|min:2|max:255" />
 					  		</p>
 					  	</div>
 					  	<div class="form_div">
 					  		<p id="phoneInput">
 					  		<label for="regularInput">Telefonnummer</label>
-					  		<input type="text" id="regularInputPhone" name="regularInputPhone" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputPhone" name="regularInputPhone" value="'.$phone.'" data-validator="required|min:2|max:255" />
 					  		</p>
 					  	</div>
 					  	<div class="form_div">
 					  		<p id="mailInput">
 					  		<label for="regularInput">E-mail</label>
-					  		<input type="text" id="regularInputEmail" name="regularInputEmail" data-validator="required|pattern:email|max:255" />
+					  		<input type="text" id="regularInputEmail" name="regularInputEmail" value="'.$email.'" data-validator="required|pattern:email|max:255" />
 					  		</p>
 					  	</div>
 					  <button type="submit" id="confirmBookingbutton" name="confirmBookingButton">Bekräfta</button>
@@ -164,8 +172,13 @@ class MasterController {
 		
 		$boolean = false;
 		$message = "";
+	
 		global $wpdb;
 		$booking = $wpdb->get_results( "SELECT * FROM wp_ramundboende_booking WHERE BookingId=".$hidden);
+		if (empty($name) || empty($address) || empty($postal) || empty($city) || empty($phone) || empty($email)) {
+			$message = "Inget fält får lämnas tomt.";
+			return array($message, $boolean, $booking);
+		}
 		if ($this->checkEmail($email)) {
 			$wpdb->insert( 'wp_ramundboende_customer', array('Name' => $name, 'Address' => $address, 'Postal' => $postal, 
 															'City' => $city, 'Phone' => $phone, 'Email' => $email ) );
@@ -212,7 +225,7 @@ class MasterController {
 	
 	private function sendToCustomer($data=array('customerInfo'=>array(), 'stuga'=>'', 'week'=>'', 'year'=>'', 'price'=>'')){
 		$subject = "Bokningsbekräftelse";
-		$message = '<h4>Bokning av '.$data['stuga']->PropertyName.' vecka: '.$data['week']->Week.' år: '.$data['year']->Year.'. Pris: '.$data['price']->Price.'</h4>';
+		$message = '<h4>Bokning av '.$data['stuga']->PropertyName.' vecka: '.$data['week']->Week.' år: '.$data['year']->Year.'. Pris: '.$data['price']->Price.':-</h4>';
 		$message .= "fritext";
 		$email = $data['customerInfo']['Email'];
 		return $this->sendMail($email, $subject, $message);
@@ -220,7 +233,7 @@ class MasterController {
 	
 	private function sendToAdmin($data=array('customerInfo'=>array(), 'stuga'=>'', 'week'=>'', 'year'=>'', 'price'=>'')){
 		$subject = "Ny bokning!";
-		$message = '<h4>Bokning av '.$data['stuga']->PropertyName.' vecka: '.$data['week']->Week.' år: '.$data['year']->Year.'. Pris: '.$data['price']->Price.'</h4>';
+		$message = '<h4>Bokning av '.$data['stuga']->PropertyName.' vecka: '.$data['week']->Week.' år: '.$data['year']->Year.'. Pris: '.$data['price']->Price.':-</h4>';
 		$message .= "";
 		$email = get_option('admin_email');
 		return $this->sendMail($email, $subject, $message);
