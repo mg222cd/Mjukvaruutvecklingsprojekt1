@@ -42,8 +42,8 @@
 
 		// http://foundation.zurb.com/docs/components/abide.html
 		var patterns = {
-			alpha: /^[a-zÃ¥Ã¤Ã¶A-ZÃ…Ã„Ã–]+$/,
-			alphaNumeric : /^[a-zÃ¥Ã¤Ã¶A-ZÃ…Ã„Ã–0-9]+$/,
+			alpha: /^[a-zåäöA-ZÅÄÖ]+$/,
+			alphaNumeric : /^[a-zåäöA-ZÅÄÖ0-9]+$/,
 			integer: /^[-+]?\d+$/,
 			number: /^[-+]?[1-9]\d*$/,
 
@@ -84,7 +84,6 @@
 				if(settings.blur){
 					$(this).blur(function(){
 						validate($(this));
-						alert("hej");
 					});
 				}
 				if(settings.keypress){
@@ -140,7 +139,7 @@
 						switch(rule){
 							case 'required':
 								if(value === '' || value === null){
-									errorElement.text('The '+label+' field is required.');
+									errorElement.text('Fältet '+label+' är obligatoriskt.');
 									if(rule === 'required'){
 										i = ruleArray.length;
 									}

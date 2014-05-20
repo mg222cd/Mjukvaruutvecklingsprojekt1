@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 	if($.fn.validator) {
-		//$('#bookingForm').validator();
+		$('#bookingForm').validator();
 	}
 	
 	//information i rubriken

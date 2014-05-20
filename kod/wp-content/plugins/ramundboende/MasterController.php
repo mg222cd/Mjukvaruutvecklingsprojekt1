@@ -99,42 +99,25 @@ class MasterController {
 		$form = '<p>Bekräfta bokningen genom att ange dina kontaktuppgifter nedan.</p>
 				<form id="bookingForm" method="POST" action="'.$this->curPageURL().'">
 						<input type="hidden" name="hiddenId" value="'.$hidden.'" id="hiddenId">
-    					<div class="form_div">
-    						<p id="nameInput">
+
 					  		<label for="regularInput">Namn</label>
-					  		<input type="text" id="regularInputName" name="regularInputName" value="'.$name.'" data-validator="required|min:2|max:255" />
-					  		</p>
-					  	</div>
-					  	<div class="form_div">
-					  		<p id="addressInput">
+					  		<input type="text" id="regularInputName" maxlength="40" name="regularInputName" value="'.$name.'" data-validator="required|min:2|max:255" />
+
 					  		<label for="regularInput">Adress</label>
-					  		<input type="text" id="regularInputAddress" name="regularInputAddress" value="'.$address.'" data-validator="required|min:2|max:255" />
-					  		</p>
-					  	</div>
-					  	<div class="form_div">
-					  		<p id="postalInput">
+					  		<input type="text" id="regularInputAddress" maxlength="40" name="regularInputAddress" value="'.$address.'" data-validator="required|min:2|max:255" />
+
 					  		<label for="regularInput">Postnummer</label>
-					  		<input type="text" id="regularInputPostal" name="regularInputPostal" value="'.$postal.'" data-validator="required|min:2|max:255" />
-					  		</p>
-					  	</div>
-							<p id="cityInput">
-							<div class="form_div">
+					  		<input type="text" id="regularInputPostal" maxlength="6" name="regularInputPostal" value="'.$postal.'" data-validator="required|min:2|max:255" />
+
 					  		<label for="regularInput">Ort</label>
-					  		<input type="text" id="regularInputCity" name="regularInputCity" value="'.$city.'" data-validator="required|min:2|max:255" />
-					  		</p>
-					  	</div>
-					  	<div class="form_div">
-					  		<p id="phoneInput">
+					  		<input type="text" id="regularInputCity" maxlength="25" name="regularInputCity" value="'.$city.'" data-validator="required|min:2|max:255" />
+
 					  		<label for="regularInput">Telefonnummer</label>
-					  		<input type="text" id="regularInputPhone" name="regularInputPhone" value="'.$phone.'" data-validator="required|min:2|max:255" />
-					  		</p>
-					  	</div>
-					  	<div class="form_div">
-					  		<p id="mailInput">
+					  		<input type="text" id="regularInputPhone" maxlength="20" name="regularInputPhone" value="'.$phone.'" data-validator="required|min:2|max:255" />
+
 					  		<label for="regularInput">E-mail</label>
-					  		<input type="text" id="regularInputEmail" name="regularInputEmail" value="'.$email.'" data-validator="required|pattern:email|max:255" />
-					  		</p>
-					  	</div>
+					  		<input type="text" id="regularInputEmail" maxlength="50" name="regularInputEmail" value="'.$email.'" data-validator="required|pattern:email|max:255" />
+
 					  <button type="submit" id="confirmBookingbutton" name="confirmBookingButton">Bekräfta</button>
 					  <button type="submit" id="breakBookingbutton" name="breakBookingButton">Avbryt</button>
 					</form>';
