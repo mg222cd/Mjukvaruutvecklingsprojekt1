@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="24" version="2.0">
+<workbench progressCount="50" version="2.0">
 <workbenchAdvisor/>
 <window height="812" maximized="true" width="1327" x="10" y="22">
 <fastViewData fastViewLocation="1024"/>
@@ -17,6 +17,8 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="70" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.editor.js" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="com.aptana.editor.php" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.aptana.editor.css" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
@@ -33,29 +35,64 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="com.aptana.editor.css" name="style.css" partName="style.css | marike" title="style.css | marike" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/style.css" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="com.aptana.editor.css" name="style.css" partName="style.css | marike" title="style.css | marike" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/style.css" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/style.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="267" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2448" selectionTopPixel="2340"/>
 </editor>
 <editor id="com.aptana.editor.php" name="MasterController.php" partName="MasterController.php" title="MasterController.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/MasterController.php" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/MasterController.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="881" selectionTopPixel="4"/>
-</editor>
-<editor id="com.aptana.editor.css" name="style.css" partName="style.css | ramundboende" title="style.css | ramundboende" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="988" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5286" selectionTopPixel="1504"/>
 </editor>
 <editor id="com.aptana.editor.php" name="header.php" partName="header.php" title="header.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/header.php" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/header.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="41" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.php" name="wp-config.php" partName="wp-config.php" title="wp-config.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-config.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-config.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="635" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.php" name="ramundberget.php" partName="ramundberget.php" title="ramundberget.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/ramundberget.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/ramundberget.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="296" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.js" name="validator.js" partName="validator.js" title="validator.js" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/validator.js" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/validator.js"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="6453" selectionTopPixel="1908"/>
+</editor>
+<editor id="com.aptana.editor.css" name="style.css" partName="style.css | ramundboende" title="style.css | ramundboende" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1479" selectionTopPixel="213"/>
+</editor>
+<editor id="com.aptana.editor.php" name="functions.php" partName="functions.php" title="functions.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/functions.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/functions.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="245" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.php" name="default-widgets.php" partName="default-widgets.php" title="default-widgets.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-includes/default-widgets.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-includes/default-widgets.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="26" selectionOffset="26402" selectionTopPixel="10629"/>
+</editor>
+<editor id="com.aptana.editor.php" name="single.php" partName="single.php" title="single.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/single.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/single.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="52" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.php" name="archive.php" partName="archive.php" title="archive.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/archive.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/archive.php"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="com.aptana.editor.php" name="wp-config.php" partName="wp-config.php" title="wp-config.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-config.php" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-config.php"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2525" selectionTopPixel="779"/>
+<editor id="com.aptana.editor.php" name="index.php" partName="index.php" title="index.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/index.php" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/index.php"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="42" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -84,13 +121,19 @@
 <viewState/>
 </view>
 <view id="com.aptana.explorer.view" partName="App Explorer">
-<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled=""/>
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="test">
+<project name="test">
+<selection>
+<element path="/test/validator.js"/>
+</selection>
+</project>
+</viewState>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
 <viewState/>
 </view>
 </views>
-<perspectives activePart="com.aptana.editor.php" activePerspective="com.aptana.ui.WebPerspective">
+<perspectives activePart="com.aptana.editor.css" activePerspective="com.aptana.ui.WebPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Web"/>
 <alwaysOnActionSet id="com.aptana.ruby.debug.ui.RubyDebugActionSet"/>
@@ -193,107 +236,174 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/style.css"/>
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/MasterController.php"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/header.php"/>
 <editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-config.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/MasterController.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/header.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/ramundberget.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/style.css"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" uri="file:/Applications/MAMP/bin/php/php5.5.3/conf/php.ini"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/wp-config.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/validator.js"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" path="/test/validator.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/script.js"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/functions.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-includes/widgets.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-includes/default-widgets.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/single.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/archive.php"/>
+<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/index.php"/>
 </editors>
-<item historyLabel="style.css | marike" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="style.css | marike" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="style.css | marike" index="0">
-<position/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8028" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8198" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8197" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8945" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8519" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8197" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8159" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8197" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8171" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8183" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8197" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8146" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="7000" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="7427" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8454" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="8281" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="956" y="0"/>
-</item>
-<item historyLabel="style.css | marike" index="0">
-<position info="not_deleted" x="2169" y="0"/>
-</item>
-<item historyLabel="style.css | ramundboende" index="2">
-<position info="not_deleted" x="988" y="0"/>
-</item>
-<item historyLabel="style.css | marike" index="0">
-<position info="not_deleted" x="267" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
-<position info="not_deleted" x="904" y="0"/>
-</item>
-<item historyLabel="header.php" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MasterController.php" index="1">
+<item historyLabel="MasterController.php" index="0">
 <position info="not_deleted" x="881" y="0"/>
 </item>
-<item active="true" historyLabel="wp-config.php" index="4">
+<item historyLabel="wp-config.php" index="1">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MasterController.php" index="2">
+<position info="not_deleted" x="881" y="0"/>
+</item>
+<item historyLabel="MasterController.php" index="2">
+<position/>
+</item>
+<item historyLabel="header.php" index="3">
+<position info="not_deleted" x="1624" y="0"/>
+</item>
+<item historyLabel="ramundberget.php" index="4">
+<position info="not_deleted" x="346" y="0"/>
+</item>
+<item historyLabel="header.php" index="3">
+<position info="not_deleted" x="1624" y="0"/>
+</item>
+<item historyLabel="style.css" index="5">
+<position info="not_deleted" x="988" y="0"/>
+</item>
+<item historyLabel="header.php" index="3">
+<position info="not_deleted" x="1336" y="0"/>
+</item>
+<item historyLabel="style.css | marike" index="6">
+<position info="not_deleted" x="833" y="0"/>
+</item>
+<item historyLabel="ramundberget.php" index="4">
+<position info="not_deleted" x="346" y="0"/>
+</item>
+<item historyLabel="php.ini" index="7">
+<position/>
+</item>
+<item historyLabel="ramundberget.php" index="4">
+<position info="not_deleted" x="346" y="0"/>
+</item>
+<item historyLabel="php.ini" index="7">
+<position/>
+</item>
+<item historyLabel="ramundberget.php" index="4">
+<position info="not_deleted" x="346" y="0"/>
+</item>
+<item historyLabel="wp-config.php | marike" index="8">
+<position/>
+</item>
+<item historyLabel="wp-config.php" index="1">
+<position info="not_deleted" x="2561" y="0"/>
+</item>
+<item historyLabel="wp-config.php | marike" index="8">
+<position info="not_deleted" x="6" y="0"/>
+</item>
+<item historyLabel="wp-config.php" index="1">
+<position info="not_deleted" x="635" y="0"/>
+</item>
+<item historyLabel="ramundberget.php" index="4">
+<position info="not_deleted" x="240" y="0"/>
+</item>
+<item historyLabel="php.ini" index="7">
+<position info="not_deleted" x="10149" y="0"/>
+</item>
+<item historyLabel="ramundberget.php" index="4">
+<position info="not_deleted" x="296" y="0"/>
+</item>
+<item historyLabel="header.php" index="3">
+<position info="not_deleted" x="41" y="22"/>
+</item>
+<item historyLabel="validator.js" index="9">
+<position info="not_deleted" x="287" y="0"/>
+</item>
+<item historyLabel="validator.js | test" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="validator.js" index="9">
+<position info="not_deleted" x="0" y="9496"/>
+</item>
+<item historyLabel="validator.js | test" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="validator.js" index="9">
+<position info="not_deleted" x="1675" y="0"/>
+</item>
+<item historyLabel="script.js" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="script.js" index="11">
+<position info="not_deleted" x="90" y="0"/>
+</item>
+<item historyLabel="validator.js" index="9">
+<position info="not_deleted" x="5762" y="0"/>
+</item>
+<item historyLabel="MasterController.php" index="2">
+<position info="not_deleted" x="5286" y="0"/>
+</item>
+<item historyLabel="script.js" index="11">
+<position info="not_deleted" x="90" y="0"/>
+</item>
+<item historyLabel="validator.js" index="9">
+<position info="not_deleted" x="6453" y="0"/>
+</item>
+<item historyLabel="style.css | marike" index="6">
+<position info="not_deleted" x="833" y="0"/>
+</item>
+<item historyLabel="style.css | ramundboende" index="5">
+<position info="not_deleted" x="1479" y="0"/>
+</item>
+<item historyLabel="functions.php" index="12">
+<position info="not_deleted" x="237" y="0"/>
+</item>
+<item historyLabel="widgets.php" index="13">
+<position info="not_deleted" x="15132" y="0"/>
+</item>
+<item historyLabel="functions.php" index="12">
+<position info="not_deleted" x="237" y="0"/>
+</item>
+<item historyLabel="default-widgets.php" index="14">
+<position info="not_deleted" x="24099" y="4465"/>
+</item>
+<item historyLabel="functions.php" index="12">
+<position/>
+</item>
+<item historyLabel="default-widgets.php" index="14">
+<position info="not_deleted" x="26402" y="26"/>
+</item>
+<item historyLabel="functions.php" index="12">
+<position info="not_deleted" x="245" y="0"/>
+</item>
+<item historyLabel="style.css | marike" index="6">
+<position info="not_deleted" x="2455" y="0"/>
+</item>
+<item historyLabel="header.php" index="3">
+<position info="not_deleted" x="41" y="22"/>
+</item>
+<item historyLabel="ramundberget.php" index="4">
+<position info="not_deleted" x="296" y="0"/>
+</item>
+<item historyLabel="single.php" index="15">
+<position info="not_deleted" x="52" y="0"/>
+</item>
+<item historyLabel="archive.php" index="16">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="index.php" index="17">
+<position info="not_deleted" x="42" y="0"/>
+</item>
+<item active="true" historyLabel="style.css | marike" index="6">
+<position info="not_deleted" x="2455" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -312,20 +422,50 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="index.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/index.php">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/index.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="archive.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/archive.php">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/archive.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="single.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/single.php">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/single.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="default-widgets.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-includes/default-widgets.php">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-includes/default-widgets.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="widgets.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-includes/widgets.php">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-includes/widgets.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="functions.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/functions.php">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/functions.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" name="style.css" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="script.js" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/script.js">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/script.js"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.js" name="validator.js" tooltip="test/validator.js">
+<persistable path="/test/validator.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.js" name="validator.js" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/validator.js">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/validator.js"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="php.ini" tooltip="/Applications/MAMP/bin/php/php5.5.3/conf/php.ini">
+<persistable uri="file:/Applications/MAMP/bin/php/php5.5.3/conf/php.ini"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="wp-config.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/wp-config.php">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/wp-config.php"/>
+</file>
+<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="ramundberget.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/ramundberget.php">
+<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/ramundberget.php"/>
+</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="wp-config.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-config.php">
 <persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-config.php"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="header.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/header.php">
 <persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/header.php"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" name="style.css" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css">
-<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/style.css"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.php" name="MasterController.php" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/MasterController.php">
-<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/plugins/ramundboende/MasterController.php"/>
-</file>
-<file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.aptana.editor.css" name="style.css" tooltip="/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/style.css">
-<persistable uri="file:/Users/marikegrinde/Mjukvaruutvecklingsprojekt1/kod/wp-content/themes/marike/style.css"/>
 </file>
 </mruList>
 </workbench>

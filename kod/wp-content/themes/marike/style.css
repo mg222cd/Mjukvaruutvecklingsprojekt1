@@ -170,3 +170,15 @@ legend{
 	padding: 5px;
 }
 
+/* Pictures
+================================================== */
+.thumbs {
+	float: left;
+	margin-right: 10px;
+}
+
+/* Others
+================================================== */
+#lillstugan_header{
+	padding-top:350px;
+}
