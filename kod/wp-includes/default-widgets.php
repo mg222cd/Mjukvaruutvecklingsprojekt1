@@ -718,7 +718,7 @@ class WP_Widget_Recent_Posts extends WP_Widget {
 			<?php if ( $show_date ) : ?>
 				<span class="post-date"><?php echo get_the_date(); ?></span>
 			<?php endif; ?>
-			<?php the_excerpt(); ?>
+			
 			</li>
 		<?php endwhile; ?>
 		</ul>

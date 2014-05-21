@@ -9,15 +9,37 @@
 ================================================== */
 body{
 	font-family:Helvetica;
+	background-color: #FFFFFF;
+}
+
+.container{
+	background-color:#FFFFFF;
 }
 
 h2{
+	clear:both;
 	color: #E54F08;
 }
 
 h3{
 	font-size: 18px;
 	font-weight:bold;
+	color: #FE3309;
+}
+
+h5{
+	font-size:20px;
+}
+
+h6{
+	padding-top:15px;
+}
+
+
+strong{
+	font-family:Helvetica;
+	font-weight:bolder;
+	font-size:26;
 }
 
 /* Navigation
@@ -47,21 +69,22 @@ nav li a, a:visited {
 	text-align: center;
 }
 
-nav li a:hover {
-	  color:#fc7a06;
+nav li a:hover, a:hover {
+	color:#fc7a06;
 }
 
 nav a.active{
+	color:#fc7a06;
 }
 
 /* Content
 ================================================== */
-#content{
+.content{
 	margin-top: 50px;
 	margin-bottom:25px;
 }
 
-#content .twelve p{
+.content .twelve p{
 	margin-right:10px;
 }
 
@@ -89,6 +112,17 @@ nav a.active{
 	color:#888888;
 }
 
+/* Pricelist
+================================================== */
+
+.summer_block{
+	float: left;
+	margin-right:30px;
+}
+
+.winter_header{
+	clear:both;
+}
 
 /* Footer
 ================================================== */

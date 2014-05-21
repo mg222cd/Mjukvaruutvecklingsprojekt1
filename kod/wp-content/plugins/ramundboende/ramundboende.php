@@ -26,7 +26,6 @@ function addScript(){
 }
 add_action( 'wp_enqueue_scripts', 'addScript' );
 
-require_once ("Booking.php");
 class MasterController {
 	private function curPageURL() {
 		 $pageURL = 'http';
@@ -44,8 +43,9 @@ class MasterController {
 		global $wpdb;
 		$stugor = $wpdb->get_results( "SELECT * FROM wp_ramundboende_property" );
 		$bokningar= array();
+		//var_dump(date('W'));
 		foreach ($stugor as $stuga) {
-			$bokningar[] = $wpdb->get_results( "SELECT * FROM wp_ramundboende_booking WHERE CustomerId=1 AND PropertyId=".$stuga->PropertyId." ORDER BY Year, Week" );	
+			$bokningar[] = $wpdb->get_results( "SELECT * FROM wp_ramundboende_booking WHERE CustomerId=1 AND PropertyId=".$stuga->PropertyId." AND Week >= ".date('W')." OR CustomerId=1 AND PropertyId=".$stuga->PropertyId." AND Year >= ".date('Y')." ORDER BY Year, Week" );	
 		}
 		$output ="";
 		for ($i=0; $i < count($stugor); $i++) { 

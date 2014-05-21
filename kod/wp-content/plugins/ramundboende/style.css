@@ -45,3 +45,7 @@ http://sldn.softlayer.com/blog/cwolff/Pure-CSS-Modal-Overlays*/
 	margin-top: -20px;
 	margin-bottom: 20px;
 }
+
+.error:empty{
+    display:none;
+}

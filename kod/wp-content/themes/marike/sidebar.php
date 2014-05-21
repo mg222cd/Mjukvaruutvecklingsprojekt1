@@ -1,2 +1,1 @@
-
-	<?php dynamic_sidebar('news_in_sidebar'); ?>
+<?php dynamic_sidebar('news_in_sidebar'); ?>

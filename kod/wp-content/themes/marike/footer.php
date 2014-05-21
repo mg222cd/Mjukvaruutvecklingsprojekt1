@@ -9,7 +9,7 @@
 						<div id="footer_address">
 						<p>Mail: info(at)ramundboende.se<br />
 						Telefon: 070-3261974 eller 070-6221065<br />
-						Adress: Bruksvallarnas Semesterboende AB, Gruvarbetarvägen 14, 840 97 Bruksvallarna</p>
+						Adress: Bruksvallarnas Semesterboende AB, Gruvarbetarvägen 10, 840 97 Bruksvallarna</p>
 						</div>
 					</div>
 				
