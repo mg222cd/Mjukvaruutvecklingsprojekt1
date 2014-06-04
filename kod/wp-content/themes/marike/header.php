@@ -14,11 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/skeleton.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/stylesheets/layout.css" />
 	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
-	<!-- Favicon TODO:lägg in.
-	================================================== -->
-	<link rel="shortcut icon" href="">
-	<link rel="apple-touch-icon" href="">
+
 <?php wp_head(); ?>
 </head>
 
@@ -27,7 +23,9 @@
 		<!-- HEADER -->
 		<div class="sixteen columns">
 			<div class="six columns alpha">
-				<img src="<?php bloginfo('url');?>/wp-content/themes/marike/images/logo_small.png" />
+				<a href="<?php echo site_url(); ?>">
+					<img alt"Ramundboende logo" src="<?php bloginfo('url');?>/wp-content/themes/marike/images/logo_small.png" />
+				</a>
 			</div>
 			<nav>
 			<div class="ten columns omega">

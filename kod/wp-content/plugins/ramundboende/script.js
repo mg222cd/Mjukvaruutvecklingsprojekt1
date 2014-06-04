@@ -21,6 +21,7 @@ jQuery(document).ready(function($){
 		$('#hiddenId').val(bookingId);
 		//visar 
 		$('#overlay').toggleClass('hideForm');
+		$('#regularInputName').focus();
 	});
 	
 	//avbryt-knappen

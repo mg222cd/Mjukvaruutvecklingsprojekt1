@@ -24,7 +24,7 @@ h2{
 h3{
 	font-size: 18px;
 	font-weight:bold;
-	color: #FE3309;
+	color: #E54F08;
 }
 
 h5{
@@ -40,6 +40,17 @@ strong{
 	font-family:Helvetica;
 	font-weight:bolder;
 	font-size:26;
+}
+
+#sidebar .blue{
+	list-style-type: none; 
+	background: #0091B0 !important;
+	color: #FFFFFF !important;
+}
+
+#sidebar .blue:hover { 
+	color: #FFFFFF !important;
+	background: #04D0FC !important;
 }
 
 /* Navigation
@@ -88,6 +99,17 @@ nav a.active{
 	margin-right:10px;
 }
 
+.post{
+	margin-top:20px;
+}
+
+.post:first-of-type{
+	margin-top:0;
+}
+
+.clear{
+	clear: both;
+}
 
 /* Sidebar
 ================================================== */
@@ -173,6 +195,11 @@ tr:nth-child(odd){
 input[type="button"]{
 	color:#000000;
 }
+
+input[type="submit"]{
+margin:5px;
+}
+
 
 /* Contact Form
 ================================================== */

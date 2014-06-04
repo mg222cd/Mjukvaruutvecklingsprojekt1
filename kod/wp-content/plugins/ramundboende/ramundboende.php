@@ -108,22 +108,22 @@ class MasterController {
 						<input type="hidden" name="hiddenId" value="'.$hidden.'" id="hiddenId">
 
 					  		<label for="regularInput">Namn</label>
-					  		<input type="text" id="regularInputName" maxlength="40" name="regularInputName" value="'.$name.'" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputName" maxlength="40" name="regularInputName" tabindex="1" value="'.$name.'" data-validator="required|min:2|max:255" />
 
 					  		<label for="regularInput">Adress</label>
-					  		<input type="text" id="regularInputAddress" maxlength="40" name="regularInputAddress" value="'.$address.'" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputAddress" maxlength="40" name="regularInputAddress" tabindex="2" value="'.$address.'" data-validator="required|min:2|max:255" />
 
 					  		<label for="regularInput">Postnummer</label>
-					  		<input type="text" id="regularInputPostal" maxlength="6" name="regularInputPostal" value="'.$postal.'" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputPostal" maxlength="6" name="regularInputPostal" tabindex="3" value="'.$postal.'" data-validator="required|min:2|max:255" />
 
 					  		<label for="regularInput">Ort</label>
-					  		<input type="text" id="regularInputCity" maxlength="25" name="regularInputCity" value="'.$city.'" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputCity" maxlength="25" name="regularInputCity" tabindex="4" value="'.$city.'" data-validator="required|min:2|max:255" />
 
 					  		<label for="regularInput">Telefonnummer</label>
-					  		<input type="text" id="regularInputPhone" maxlength="20" name="regularInputPhone" value="'.$phone.'" data-validator="required|min:2|max:255" />
+					  		<input type="text" id="regularInputPhone" maxlength="20" name="regularInputPhone" tabindex="5" value="'.$phone.'" data-validator="required|min:2|max:255" />
 
 					  		<label for="regularInput">E-mail</label>
-					  		<input type="text" id="regularInputEmail" maxlength="50" name="regularInputEmail" value="'.$email.'" data-validator="required|pattern:email|max:255" />
+					  		<input type="text" id="regularInputEmail" maxlength="50" name="regularInputEmail" tabindex="6" value="'.$email.'" data-validator="required|pattern:email|max:255" />
 
 					  <button type="submit" id="confirmBookingbutton" name="confirmBookingButton">Bekräfta</button>
 					  <button type="submit" id="breakBookingbutton" name="breakBookingButton">Avbryt</button>
@@ -140,13 +140,15 @@ class MasterController {
 			$message=array($h1,$p.$button);
 		}
 		else {
-			if ($message = "Dubbelbokning!") {
-				$message = "det här är en dubbelbokning";
-			} 
-			else {
-				$h1 = $h4.'<div class="red_text">'.$submitForm[0].'</div>';
-				$message = array($h1,$form);	
-			}
+		if ($submitForm[0] === "Dubbelbokning!") {
+			$button = '<a class="button" href="http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'].'">Återgå</a>';
+			$p = '<p>Beklagar! Vald vecka är inte längre bokningsbar.</p>';
+			$message = array(null, $p.$button);
+		} 
+		else {
+			$h1 = $h4.'<div class="red_text">'.$submitForm[0].'</div>';
+			$message = array($h1,$form);	
+		}
 		}
 		return'<div id="overlay" class="'.$class.'">
 					'.$message[0].'
@@ -176,7 +178,7 @@ class MasterController {
 		$booking = $wpdb->get_results( "SELECT * FROM wp_ramundboende_booking WHERE BookingId=".$hidden);
 		
 		//säkerhetskontroll för att undvika dubbelbokning
-		if ($booking[0]->CustomerId == 2) {
+		if ($booking[0]->CustomerId == 1) {
 			if (empty($name) || empty($address) || empty($postal) || empty($city) || empty($phone) || empty($email)) {
 			$message = "Inget fält får lämnas tomt.";
 			return array($message, $boolean, $booking);
@@ -229,7 +231,6 @@ class MasterController {
 	}
 	
 	private function sendMail($email, $subject, $message){
-		$headers = "MIME-Version: 1.0\r\n";
 		$headers .= "Content-Type: text/HTML; charset=utf-8\r\n";
 		$headers .= 'From: info@ramundboende.se' . "\r\n" .
     	'Reply-To: info@ramundboende.se' . "\r\n";
@@ -245,7 +246,7 @@ class MasterController {
 		$message .= $data['customerInfo']['Postal'].' '.$data['customerInfo']['Postal'].'<br><br>';
 		$message .= 'Telefon: ' .$data['customerInfo']['Phone'].'<br>';
 		$message .= 'Mail: ' .$data['customerInfo']['Email'].'<br><br><br>';
-		$message .= '<p>In/utcheckningsdag under vintersäsongen före påskveckan är lördag, efter påskveckan söndag. Övriga veckor lördag.
+		$message .= '<p>In/utcheckningsdag är alltid söndag.
 					Incheckning tidigast kl 15 ankomstdagen och utcheckning senast kl 11 avresedagen. Nyckeln sitter i dörren vid ankomst.
 					Adress: Klinkvägen 2, 84097 Bruksvallarna. Vägbeskrivning: 50 m efter Ramundbergets centrum, första till höger efter 
 					avfarten till Ramis Livs.</p>';
@@ -279,7 +280,7 @@ class MasterController {
 		$message .= $data['customerInfo']['Postal'].' '.$data['customerInfo']['Postal'].'<br><br>';
 		$message .= 'Telefon: ' .$data['customerInfo']['Phone'].'<br>';
 		$message .= 'Mail: ' .$data['customerInfo']['Email'].'<br><br><br>';
-		$message .= '<p>In/utcheckningsdag under vintersäsongen före påskveckan är lördag, efter påskveckan söndag. Övriga veckor lördag.
+		$message .= '<p>In/utcheckningsdag är alltid söndag.
 					Incheckning tidigast kl 15 ankomstdagen och utcheckning senast kl 11 avresedagen. Nyckeln sitter i dörren vid ankomst.
 					Adress: Klinkvägen 2, 84097 Bruksvallarna. Vägbeskrivning: 50 m efter Ramundbergets centrum, första till höger efter 
 					avfarten till Ramis Livs.</p>';
